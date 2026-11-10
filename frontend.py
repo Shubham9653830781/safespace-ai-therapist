@@ -1,8 +1,9 @@
 # Step1: Setup Streamlit
+import os
 import streamlit as st
 import requests
 
-BACKEND_URL = "http://localhost:8000/ask"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/ask")
 
 st.set_page_config(page_title="AI Mental Health Therapist", layout="wide")
 st.title("🧠 SafeSpace – AI Mental Health Therapist")
